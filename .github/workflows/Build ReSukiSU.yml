@@ -8,60 +8,16 @@ on:
         required: true
         type: choice
         options:
-          - 'sm8750'
-          - 'sm8735'
-          - 'mt6991'
-          - 'sm8650'
-          - 'mt6989'
-          - 'sm8635'
           - 'sm8550'
-          - 'sm8450'
-          - 'sm8475'
-          - 'sm7675'
-          - 'sm7635'
-          - 'sm7550'
-          - 'sm6375'
-        default: 'sm8650'
+        default: 'sm8550'
         
       FEIL:
         description: "手机型号"
         required: true
         type: choice
         options:
-          - 'oneplus_13_b'
-          - 'oneplus_13s_b'
-          - 'oneplus_13t_b'
-          - 'oneplus_ace5_pro_b'
-          - 'oneplus_ace_6'
-          - 'oneplus_pad_2_pro_b'
-          - 'oneplus_pad_3_b'
-          - 'oneplus_ace5_ultra_b'
-          - 'oneplus_nord_6'
-          - 'oneplus_turbo_6'
-          - 'oneplus_12_b'
-          - 'oneplus_ace3_pro_b'
-          - 'oneplus_ace5_b'
-          - 'oneplus_13r_b'
-          - 'oneplus_pad2_b'
-          - 'oneplus_pad_pro_b'
-          - 'oneplus_ace5_race_b'
-          - 'oneplus_nord_5_b'
-          - 'oneplus_11_b'
-          - 'oneplus_12r_b'
-          - 'oneplus_ace2_pro_b'
-          - 'oneplus_ace3_b'
-          - 'oneplus_open_b'
-          - 'oneplus_10t_v'
-          - 'oneplus_11r_b'
-          - 'oneplus_ace2_b'
-          - 'oneplus_ace_pro_v'
-          - 'oneplus_10_pro_b'
-          - 'oneplus_ace_3v_b'
-          - 'oneplus_turbo_6v'
-          - 'oneplus_nord_4_b'
-          - 'oneplus_nord_ce4_lite_5g'
-          - 'oneplus_nord_ce4_b'
-        default: 'oneplus_12_b'
+          - 'oneplus_ace3_v'
+        default: 'oneplus_ace3_v'
         
       ANDROID_VERSION:
         description: "内核安卓KMI版本"
@@ -72,7 +28,7 @@ on:
           - 'android14'
           - 'android13'
           - 'android12'
-        default: 'android14'
+        default: 'android13'
         
       KERNEL_VERSION:
         description: "内核版本"
@@ -83,7 +39,7 @@ on:
           - '6.1'
           - '5.15'
           - '5.10'
-        default: '6.1'
+        default: '5.15'
 
       SUSFS:
         description: "是否启用SUSFS"
@@ -92,7 +48,7 @@ on:
         options:
           - 'On'
           - 'Off'
-        default: 'Off'
+        default: 'On'
        
       lz4kd:
         description: "是否启用lz4kd(6.1 关闭时使用 lz4 + zstd; 6.6 关闭时使用 lz4)"
@@ -128,7 +84,7 @@ on:
         options:
           - 'On'
           - 'Off'
-        default: 'On'
+        default: 'Off'
 
       UNICODE_BYPASS:
         description: "是否添加Unicode零宽绕过修复补丁(除5.10版本外版本不推荐开启, 建议使用 https://t.me/real5ec1cff/271 无痛修复)"
@@ -137,7 +93,7 @@ on:
         options:
           - 'On'
           - 'Off'
-        default: 'Off'
+        default: 'On'
          
 jobs:
   build:
